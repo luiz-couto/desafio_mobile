@@ -1,10 +1,12 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Main from './pages/main/index';
-import Data from './pages/data/index';
+//import Data from './pages/data/index';
 
-const Routes = createStackNavigator({
+const RootStack = createStackNavigator({
   Main: { screen: Main },
-  Set: { screen: Data },
+  //Data: { screen: Data },
 });
+
+const Routes = createAppContainer(RootStack)
 
 export default Routes;

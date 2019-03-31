@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, ImageBackground} from 'react-native'
+import {View, Text, ImageBackground, TouchableOpacity} from 'react-native'
 
 
 export default class Main extends React.Component{
@@ -12,7 +12,11 @@ export default class Main extends React.Component{
         const{ navigation } = this.props;
         return(
 
-            <Text>Olá</Text>
+        <View >
+            <TouchableOpacity onPress={() => {this.props.navigation.openDrawer();}}>
+                <Text>Open</Text>
+            </TouchableOpacity>
+        </View>
 
         );
 

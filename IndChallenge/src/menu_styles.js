@@ -1,21 +1,21 @@
 import { StyleSheet } from "react-native";
-// import {widthPercentageToDP as wp, heightPercentageToDP as hp}
-// from 'react-native-responsive-screen';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp}
+from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
 
 
     background: {
 
-        width:280,
-        height:740,
+        width:wp('77.77%'),
+        height:hp('100%'),
         position:'absolute',
     
       },
     
       drawerContainer: {
     
-        paddingTop: 190,
+        paddingTop: hp('25.67%'),
         
       },
     
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     
         fontFamily:'Manjari-Thin',
         fontWeight: 'normal',
-        fontSize:20,
+        fontSize:hp('2.7%'),
         
     
       },
@@ -32,24 +32,24 @@ const styles = StyleSheet.create({
     
         borderBottomWidth: 1,
         borderBottomColor: 'rgba(27,179,148,0.4)',
-        marginLeft: 20,
-        marginRight: 20,
-        height: 55,
-        paddingTop: 5,
+        marginLeft: wp('5.55%'),
+        marginRight: wp('5.55%'),
+        height: hp('7.43%'),
+        paddingTop: hp('0.67%'),
     
     
       },
       close_icon:{
 
-        marginTop: 15,
-        marginLeft: 15,
-        width: 30,
-        height: 30,
+        marginTop: hp('2.02%'),
+        marginLeft: wp('4.16%'),
+        width: wp('8.33%'),
+        height: hp('4.05%'),
 
       },
       close_container:{
 
-        width: 50,
+        width: wp('13.88%'),
 
 
       }

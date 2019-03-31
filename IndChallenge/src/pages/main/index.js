@@ -14,7 +14,7 @@ export default class Main extends React.Component{
 
         <View >
             <TouchableOpacity onPress={() => {this.props.navigation.openDrawer();}}>
-                <Text>Open</Text>
+                <Text style={{fontFamily:'Manjari-Thin'}}>Open</Text>
             </TouchableOpacity>
         </View>
 

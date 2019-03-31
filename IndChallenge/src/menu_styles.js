@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         fontFamily:'Manjari-Thin',
         fontWeight: 'normal',
         fontSize:20,
+        
     
       },
     
@@ -33,10 +34,26 @@ const styles = StyleSheet.create({
         borderBottomColor: 'rgba(27,179,148,0.4)',
         marginLeft: 20,
         marginRight: 20,
-        paddingTop: 10
+        height: 55,
+        paddingTop: 5,
     
     
+      },
+      close_icon:{
+
+        marginTop: 15,
+        marginLeft: 15,
+        width: 30,
+        height: 30,
+
+      },
+      close_container:{
+
+        width: 50,
+
+
       }
+
     
   
   

@@ -1,6 +1,7 @@
-import { createStackNavigator, createAppContainer,createDrawerNavigator,DrawerItems} from 'react-navigation';
+import { createStackNavigator, createAppContainer,createDrawerNavigator,
+DrawerItems, DrawerActions} from 'react-navigation';
 import React from 'react'
-import { View, Text, ImageBackground,} from 'react-native'
+import { View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native'
 import styles from './menu_styles'
 import Main from './pages/main/index';
 //import Data from './pages/data/index';
@@ -23,7 +24,18 @@ const RootStack = createDrawerNavigator({
 
          />
 
-          <View style = {styles.drawerContainer}>
+        <View style={styles.close_container}>
+            <TouchableOpacity onPress={() => {props.navigation.closeDrawer();}}>
+            <Image
+                
+                style={styles.close_icon}
+                source={require('./close_icon.png')}
+
+            />
+            </TouchableOpacity>
+        </View>
+
+        <View style = {styles.drawerContainer}>
           <DrawerItems {...props} 
            activeTintColor='rgb(255,255,255)'
            activeBackgroundColor='rgba(4, 40, 76, 0)'

@@ -37,7 +37,7 @@ const RootStack = createDrawerNavigator({
 
         <View style = {styles.drawerContainer}>
           <DrawerItems {...props} 
-           activeTintColor='rgb(255,255,255)'
+           activeTintColor='rgb(27,179,148)'
            activeBackgroundColor='rgba(4, 40, 76, 0)'
            inactiveTintColor='rgb(255,255,255)'
            labelStyle={styles.label_style}

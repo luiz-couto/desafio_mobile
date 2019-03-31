@@ -1,6 +1,6 @@
 import React from 'react'
-import {View, Text, ImageBackground, TouchableOpacity} from 'react-native'
-
+import {View, Text, ImageBackground, TouchableOpacity, Image} from 'react-native'
+import styles from './styles'
 
 export default class Main extends React.Component{
     static navigationOptions = {
@@ -12,12 +12,16 @@ export default class Main extends React.Component{
         const{ navigation } = this.props;
         return(
 
-        <View >
+        <View style={styles.menu_container}>
             <TouchableOpacity onPress={() => {this.props.navigation.openDrawer();}}>
-                <Text style={{fontFamily:'Manjari-Thin'}}>Open</Text>
+            <Image
+                
+                style={styles.menu_icon}
+                source={require('./menu_icon.png')}
+
+            />
             </TouchableOpacity>
         </View>
-
         );
 
 

@@ -4,12 +4,12 @@ import React from 'react'
 import { View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native'
 import styles from './menu_styles'
 import Main from './pages/main/index';
-//import Data from './pages/data/index';
+import Data from './pages/data/index';
 
 const RootStack = createDrawerNavigator({
 
   Main: { screen: Main },
-  //Data: { screen: Data },
+  Data: { screen: Data },
 }, {
 
   contentComponent: (props) => (
@@ -39,6 +39,7 @@ const RootStack = createDrawerNavigator({
           <DrawerItems {...props} 
            activeTintColor='rgb(255,255,255)'
            activeBackgroundColor='rgba(4, 40, 76, 0)'
+           inactiveTintColor='rgb(255,255,255)'
            labelStyle={styles.label_style}
            itemStyle={styles.item_style}/>
            </View>

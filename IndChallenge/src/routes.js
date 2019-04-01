@@ -43,16 +43,16 @@ const RootStack = createDrawerNavigator({
            labelStyle={styles.label_style}
            itemStyle={styles.item_style}/>
            </View>
-          <Text></Text>
+          
         </View>
       )
 
 
 
-});
+},);
 
 
-const Routes = createAppContainer(RootStack)
+const Routes = createAppContainer(RootStack);
 
 export default Routes;
 

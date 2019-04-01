@@ -1,6 +1,8 @@
 import { createStackNavigator, createAppContainer,createDrawerNavigator,
 DrawerItems, DrawerActions} from 'react-navigation';
 import React from 'react'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp}
+from 'react-native-responsive-screen';
 import { View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native'
 import styles from './menu_styles'
 import Main from './pages/main/index';
@@ -10,7 +12,7 @@ const RootStack = createDrawerNavigator({
 
   Main: { screen: Main },
   Data: { screen: Data },
-}, {
+},{
 
   contentComponent: (props) => (
 
@@ -45,11 +47,14 @@ const RootStack = createDrawerNavigator({
            </View>
           
         </View>
-      )
+      ),
+
+    drawerWidth: wp('63.88%')
 
 
 
 },);
+
 
 
 const Routes = createAppContainer(RootStack);

@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
 
 
     background: {
-
-        width:wp('78%'),
+      
+        width:wp('63.88%'),
         height:hp('100%'),
         position:'absolute',
     

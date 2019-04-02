@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
     menu_icon:{
 
-        marginTop: hp('2.02%'),
+        marginTop: hp('2.52%'),
         marginLeft: wp('4.16%'),
         width: wp('10.33%'),
         height: hp('5.05%'),
@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
 
         borderWidth:0.4,
         borderColor: 'rgba(27,179,148,0.7)',
-        paddingLeft:wp('3.33%'),
-        paddingRight:wp('3.33%'),
-        paddingTop:hp('0.99%'),
+        paddingLeft:wp('5.33%'),
+        paddingRight:wp('5.33%'),
+        paddingTop:hp('1.3%'),
         paddingBottom: hp('0.13%'),
         borderRadius: 3,
-        height:hp('5.33%'),
-        width: wp('50%'),
+        height:hp('6.33%'),
+        width: wp('60%'),
         alignItems:'center'
 
 
@@ -46,14 +46,14 @@ const styles = StyleSheet.create({
     request_text:{
 
         fontFamily:'Manjari-Thin',
-        fontSize:hp('2.43%'),
-        color:'rgb(27,179,148)'
+        fontSize:hp('3.0%'),
+        color:'rgb(27,179,148)',
 
     },
 
     request_touchable:{
 
-        marginLeft:wp('30.55%'),
+        marginLeft:wp('20.55%'),
         marginTop:hp('1.95%'),
     }
 

@@ -55,9 +55,17 @@ const styles = StyleSheet.create({
 
         marginLeft:wp('20.55%'),
         marginTop:hp('1.95%'),
+    },
+
+    uni_image:{
+
+        width:wp('69.44%'),
+        height: hp('33.78%'),
+        marginTop: hp('8.10%'),
+        marginLeft: wp('15%'),
+
+
     }
-
-
 
     
   

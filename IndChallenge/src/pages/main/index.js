@@ -1,11 +1,47 @@
 import React from 'react'
 import {View, Text, ImageBackground, TouchableOpacity, Image} from 'react-native'
 import styles from './styles'
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Main extends React.Component{
     static navigationOptions = {
         header: null
     };
+
+    constructor(props){
+        super(props);
+        this.state = {
+          
+            haveData: false,         
+          
+        }
+     
+      }
+
+    renderList(){
+
+        if(this.state.haveData == false){
+            return( 
+            <View>
+                <Image
+                    
+                    style={styles.uni_image}
+                    source={require('./uni_image.png')}
+
+                />
+            </View>
+            );
+        }else{
+            return(
+
+                <Text>A lista vai aperecer aqui</Text>
+
+
+            );
+        }
+
+
+    }
 
     render(){
 
@@ -24,21 +60,17 @@ export default class Main extends React.Component{
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <TouchableOpacity onPress={() => {}} style={styles.request_touchable}>
+                    <TouchableOpacity onPress={() => {this.setState({haveData: true})}} style={styles.request_touchable}>
                         <View style={styles.request_button}>
                         <Text style={styles.request_text}>Requisitar dados</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
             </View>
-            <View>
-                <Image
-                        
-                        style={styles.uni_image}
-                        source={require('./uni_image.png')}
-
-                />
-            </View>
+           
+           <ScrollView>
+                {this.renderList()} 
+           </ScrollView>
         </View>
         
         );

@@ -3,6 +3,8 @@ import {View, Text, ImageBackground, TouchableOpacity, Image} from 'react-native
 import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler';
 
+import ReleaseList from './releaseList/index'
+
 export default class Main extends React.Component{
     static navigationOptions = {
         header: null
@@ -34,7 +36,7 @@ export default class Main extends React.Component{
         }else{
             return(
 
-                <Text>A lista vai aperecer aqui</Text>
+                <ReleaseList />
 
 
             );

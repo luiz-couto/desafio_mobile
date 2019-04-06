@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, Text} from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler'
 
 import styles from './styles'
 
@@ -35,8 +35,8 @@ export default class ReleaseList extends React.Component{
         
         this.state.listArray = json.slice(0,10)
        
-        this.setState({isLoaded: true});
-       
+        this.setState({isLoaded: true}); 
+               
        
       }
 

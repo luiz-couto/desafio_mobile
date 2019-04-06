@@ -2,6 +2,8 @@ import React from 'react'
 import {View, Text} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
+import styles from './styles'
+
 import Release from './release/index'
 
 
@@ -43,8 +45,9 @@ export default class ReleaseList extends React.Component{
         if(this.state.isLoaded == false){
 
             return (
-
-                <Text>Loading.....</Text>
+                <View style={styles.loading_container}>
+                    <Text style={styles.loading}>Carregando.....</Text>
+                </View>
             )
         }else{
         
@@ -52,7 +55,7 @@ export default class ReleaseList extends React.Component{
         return(
 
 
-            <ScrollView>
+            <ScrollView style={styles.scroll}>
 
                 <View>
                 {this.state.listArray.map(release => 

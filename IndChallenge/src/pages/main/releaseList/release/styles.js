@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
         color: 'rgb(27,179,148)',
         fontFamily: 'Manjari-Thin',
-        fontSize: hp('2.16%'),
+        fontSize: hp('2.87%'),
 
 
     },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
         color: 'rgb(27,179,148)',
         fontFamily: 'Manjari-Thin',
-        fontSize: hp('2.16%'),
+        fontSize: hp('2.87%'),
 
 
     },

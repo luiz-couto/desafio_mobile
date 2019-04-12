@@ -16,21 +16,31 @@ export default class Header extends React.Component{
         return(
             <View style={styles.container}>
                 
-                <View>
+                <View style={styles.menu_container}>
                     <TouchableOpacity onPress={() => {navigation.openDrawer()}}>
-                        <Text style={{fontFamily:'Manjari-Thin'}}>Data!</Text>
+                        <Image
+                        
+                            style={styles.menu_image}
+                            source={require('./menu_icon.png')}
+
+                        />
                     </TouchableOpacity>
                 </View>
               
               
-                <View>
-                    <Text style={{fontFamily:'Manjari-Thin'}}>Comentários</Text>
+                <View style={styles.title_container}>
+                    <Text style={styles.title_text}>Comentários</Text>
                 </View>
                 
                 
-                <View>
+                <View style={styles.add_container}>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{fontFamily:'Manjari-Thin'}}>AddComment!</Text>
+                        <Image
+                            
+                            style={styles.add_image}
+                            source={require('./add_icon.png')}
+
+                        />
                     </TouchableOpacity>
                 </View>
             </View>

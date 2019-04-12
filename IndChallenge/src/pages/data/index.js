@@ -1,11 +1,15 @@
 import React from 'react'
 import {View, Text, ImageBackground, TouchableOpacity} from 'react-native'
 
+import Header from './header'
+
 
 export default class Data extends React.Component{
     static navigationOptions = {
         header: null
     };
+
+    
 
     render(){
 
@@ -13,9 +17,7 @@ export default class Data extends React.Component{
         return(
 
         <View >
-            <TouchableOpacity onPress={() => {this.props.navigation.openDrawer();}}>
-                <Text style={{fontFamily:'Manjari-Thin'}}>Data!</Text>
-            </TouchableOpacity>
+            <Header navigation={navigation} />
         </View>
 
         );

@@ -34,7 +34,7 @@ export default class Header extends React.Component{
                 
                 
                 <View style={styles.add_container}>
-                    <TouchableOpacity onPress={() => {}}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('AddComment')}}>
                         <Image
                             
                             style={styles.add_image}

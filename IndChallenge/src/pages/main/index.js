@@ -6,6 +6,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import ReleaseList from './releaseList/index'
 
 export default class Main extends React.Component{
+    
     static navigationOptions = {
         header: null
     };

@@ -14,6 +14,7 @@ export default class CommentList extends React.Component{
             
             title: '',
             comment: '',
+            commentArray: []
           
         }
     }

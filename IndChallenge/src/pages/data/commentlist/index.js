@@ -30,7 +30,11 @@ export default class CommentList extends React.Component{
             tx.executeSql('CREATE TABLE IF NOT EXISTS comment_table(comment_id INTEGER PRIMARY KEY AUTOINCREMENT,comment_title TEXT, comment_text TEXT)')
         })
 
+        
+        //this.cleanAllData()
         this.showData()
+       
+        
 
 
     }
@@ -62,7 +66,7 @@ export default class CommentList extends React.Component{
             
             rows = resultado.rows
             len = resultado.rows.length
-            text = rows.item(len-1).comment_title
+            
             
             for(i=0;i<len;i++){
 
@@ -92,7 +96,33 @@ export default class CommentList extends React.Component{
         
     }
 
-    
+    cleanAllData(){
+
+        db.transaction(function(tx){
+            tx.executeSql('DELETE FROM comment_table', [], (tx, resultado) =>{
+                
+                console.log('Item deleted')
+
+            })
+        })
+
+        this.showData()
+
+    }
+
+    deleteData(itemID){
+
+        db.transaction(function(tx){
+            tx.executeSql('DELETE FROM comment_table WHERE comment_id =' + itemID, [], (tx, resultado) =>{
+                
+                console.log('Item deleted')
+
+            })
+        })
+
+        this.showData()
+
+    }
 
     render(){
 

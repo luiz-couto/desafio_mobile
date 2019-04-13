@@ -1,7 +1,10 @@
 import React from 'react'
-import {View,Text,Image} from 'react-native'
+import {View,Text,Image,ScrollView} from 'react-native'
 
 import { openDatabase } from 'react-native-sqlite-storage';
+
+import Comment from './comment'
+import styles from './styles';
 
 
 var db = openDatabase('cldb','1.0','Comment List',-1)
@@ -56,11 +59,31 @@ export default class CommentList extends React.Component{
         },null)})
 
         result.then((resultado) => {
+            
             rows = resultado.rows
             len = resultado.rows.length
             text = rows.item(len-1).comment_title
-            console.log(rows)
-            this.setState({title: text})
+            
+            for(i=0;i<len;i++){
+
+                title = rows.item(i).comment_title
+                text = rows.item(i).comment_text
+
+                this.state.commentArray.push({
+
+                    'title': title + ';.;' + text
+                    
+                });
+
+
+                this.setState({commentArray: this.state.commentArray})
+            }
+            
+            
+            
+            console.log(this.state.commentArray)
+            //this.setState({title: text})
+            //this.setState({commentArray: rows})
         });        
                 
         
@@ -69,15 +92,26 @@ export default class CommentList extends React.Component{
         
     }
 
+    
+
     render(){
 
-        this.showData()
+        //this.showData()
+
+        let comments = this.state.commentArray.map((val,key) => {
+            return <Comment key={key} keyval={key} val={val} />
+                    //deleteMethod={ ()=> this.deleteTask(key) } 
+          });
         
 
         return(
 
             <View>
-                <Text>{this.state.title}</Text>
+                <ScrollView style={styles.scroll}>
+
+                    {comments}
+
+                </ScrollView>
             </View>
         
 

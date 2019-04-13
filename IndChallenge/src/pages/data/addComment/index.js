@@ -1,8 +1,14 @@
 import React from 'react'
 import {View,Image,TextInput,Text,TouchableOpacity} from 'react-native'
+import { NavigationActions, StackActions, DrawerActions } from 'react-navigation'
 
 import Header from './header'
 import styles from './styles';
+
+import { openDatabase } from 'react-native-sqlite-storage';
+
+
+var db = openDatabase('cldb','1.0','Comment List',-1)
 
 
 export default class AddComment extends React.Component{
@@ -18,6 +24,28 @@ export default class AddComment extends React.Component{
           
         }
     }
+
+    componentDidMount(){
+
+        
+        db.transaction(function(tx){
+            tx.executeSql('CREATE TABLE IF NOT EXISTS comment_table(comment_id INTEGER PRIMARY KEY AUTOINCREMENT,comment_title TEXT, comment_text TEXT)')
+        })
+
+    }
+
+    saveData(){
+
+        var title = this.state.title
+        var comment = this.state.text
+
+        db.transaction(function(tx){
+            tx.executeSql('INSERT INTO comment_table (comment_title,comment_text) VALUES(?,?)',[title,comment])
+        })
+
+        
+        this.props.navigation.navigate('Data')
+    };
 
     render(){
         
@@ -73,7 +101,7 @@ export default class AddComment extends React.Component{
                     </View>
 
                     <View>
-                        <TouchableOpacity onPress={() => {}} style={styles.publish_touchable}>
+                        <TouchableOpacity onPress={() => {this.saveData()}} style={styles.publish_touchable}>
                             <View style={styles.publish_button}>
                             <Text style={styles.publish_text}>Pronto!</Text>
                             </View>

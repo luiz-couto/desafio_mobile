@@ -14,7 +14,7 @@ export default class CommentList extends React.Component{
             
             title: '',
             comment: '',
-            commentArray: []
+            commentArray: [],
           
         }
     }
@@ -27,8 +27,8 @@ export default class CommentList extends React.Component{
             tx.executeSql('CREATE TABLE IF NOT EXISTS comment_table(comment_id INTEGER PRIMARY KEY AUTOINCREMENT,comment_title TEXT, comment_text TEXT)')
         })
 
-        this.saveData()
         this.showData()
+
 
     }
 
@@ -57,7 +57,8 @@ export default class CommentList extends React.Component{
 
         result.then((resultado) => {
             rows = resultado.rows
-            text = rows.item(0).comment_title
+            len = resultado.rows.length
+            text = rows.item(len-1).comment_title
             console.log(rows)
             this.setState({title: text})
         });        
@@ -70,6 +71,7 @@ export default class CommentList extends React.Component{
 
     render(){
 
+        this.showData()
         
 
         return(

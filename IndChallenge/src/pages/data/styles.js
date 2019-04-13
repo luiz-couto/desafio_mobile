@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
         
         backgroundColor: 'rgb(155,155,155)',
         flex: 1,
-        
 
    },
 

@@ -29,11 +29,18 @@ export default class Comment extends React.Component{
                             
                 <View key={this.props.keyval} style={styles.task}>
                     
-                    <View style={styles.text_view}>
-                       
-                            <Text style={styles.title}>{this.returnTitle()}</Text>
-                            <Text style={styles.comment}>{this.returnComment()}</Text>
-                       
+                    <View style={styles.com_container}>
+                            <View style={styles.title_con}>
+                                <Text style={styles.title}>{this.returnTitle()}</Text>
+                            </View>
+
+                            <View style={styles.text_con}>
+                                <Text style={styles.comment}>{this.returnComment()}</Text>
+                            </View>
+
+                            <View style={styles.down_bor}>
+
+                            </View>
                     </View>
                     
                     {/* <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>

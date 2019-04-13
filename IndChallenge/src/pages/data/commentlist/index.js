@@ -126,12 +126,13 @@ export default class CommentList extends React.Component{
 
     render(){
 
-        //this.showData()
+        
 
         let comments = this.state.commentArray.map((val,key) => {
             return <Comment key={key} keyval={key} val={val} />
                     //deleteMethod={ ()=> this.deleteTask(key) } 
           });
+        
         
 
         return(

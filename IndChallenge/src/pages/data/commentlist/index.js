@@ -9,6 +9,7 @@ import styles from './styles';
 
 var db = openDatabase('cldb','1.0','Comment List',-1)
 
+
 export default class CommentList extends React.Component{
 
     constructor(props){
@@ -17,8 +18,7 @@ export default class CommentList extends React.Component{
             
             title: '',
             comment: '',
-            commentArray: [],
-          
+            commentArray: [],          
         }
     }
     
@@ -51,7 +51,8 @@ export default class CommentList extends React.Component{
     };
 
     showData(){
-            
+
+        
         let result = new Promise((resolve,reject) => {
             
             db.transaction(function(tx){
@@ -67,6 +68,7 @@ export default class CommentList extends React.Component{
             rows = resultado.rows
             len = resultado.rows.length
             
+            this.state.commentArray = []
             
             for(i=0;i<len;i++){
 
@@ -81,13 +83,12 @@ export default class CommentList extends React.Component{
 
 
                 this.setState({commentArray: this.state.commentArray})
+                
+                
             }
-            
-            
-            
+
             console.log(this.state.commentArray)
-            //this.setState({title: text})
-            //this.setState({commentArray: rows})
+    
         });        
                 
         
@@ -123,10 +124,21 @@ export default class CommentList extends React.Component{
         this.showData()
 
     }
+    
 
     render(){
 
-        
+        const {navigation} = this.props
+
+        if(navigation.getParam('atualizado',0) == 1){
+            
+            navigation.state.params.atualizado = 0
+            this.showData()
+            
+        }
+
+
+
 
         let comments = this.state.commentArray.map((val,key) => {
             return <Comment key={key} keyval={key} val={val} />

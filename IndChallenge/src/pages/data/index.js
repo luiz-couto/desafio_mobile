@@ -20,7 +20,7 @@ export default class Data extends React.Component{
 
         <View style={styles.container} >
             <Header navigation={navigation} />
-            <CommentList />
+            <CommentList navigation={navigation} />
         </View>
 
         );

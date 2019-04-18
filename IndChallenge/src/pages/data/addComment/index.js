@@ -44,7 +44,7 @@ export default class AddComment extends React.Component{
         })
 
         
-        this.props.navigation.navigate('Data')
+        this.props.navigation.navigate('Data',{atualizado: 1})
     };
 
     render(){

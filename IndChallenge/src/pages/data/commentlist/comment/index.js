@@ -43,16 +43,11 @@ export default class Comment extends React.Component{
                             </View>
                     </View>
                     
-                    {/* <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>
+                    <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>
                     
-                        <Image
-        
-                        source={require('./delete_icon.png')}
-                        style={styles.delete_icon}
-        
-                        />
+                        <Text>Delete</Text>
                     
-                    </TouchableOpacity> */}
+                    </TouchableOpacity>
                 </View>
               
         );

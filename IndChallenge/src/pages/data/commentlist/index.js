@@ -69,6 +69,10 @@ export default class CommentList extends React.Component{
             len = resultado.rows.length
             
             this.state.commentArray = []
+
+            if(len==0){
+                this.setState({commentArray: this.state.commentArray})
+            }
             
             for(i=0;i<len;i++){
 
@@ -113,8 +117,10 @@ export default class CommentList extends React.Component{
 
     deleteData(itemID){
 
+        id = this.getID(itemID)
+
         db.transaction(function(tx){
-            tx.executeSql('DELETE FROM comment_table WHERE comment_id =' + itemID, [], (tx, resultado) =>{
+            tx.executeSql('DELETE FROM comment_table WHERE comment_id =' + id, [], (tx, resultado) =>{
                 
                 console.log('Item deleted')
 
@@ -122,6 +128,28 @@ export default class CommentList extends React.Component{
         })
 
         this.showData()
+
+    }
+
+    getID(i){
+
+        let result = new Promise((resolve,reject) => {
+            
+            db.transaction(function(tx){
+            tx.executeSql('SELECT * FROM comment_table',[],(tx,resultado) => {
+                resolve(resultado)
+                
+                
+            })
+        },null)})
+
+        result.then((resultado) => {
+
+           id = resultado.rows.item(i).comment_id
+           return id
+
+        })
+
 
     }
     
@@ -141,8 +169,8 @@ export default class CommentList extends React.Component{
 
 
         let comments = this.state.commentArray.map((val,key) => {
-            return <Comment key={key} keyval={key} val={val} />
-                    //deleteMethod={ ()=> this.deleteTask(key) } 
+            return <Comment key={key} keyval={key} val={val} 
+                    deleteMethod={ ()=> this.deleteData(key) } />
           });
         
         

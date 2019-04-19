@@ -25,6 +25,9 @@ export default class Comment extends React.Component{
     }
     
     render(){
+
+        const navigation = this.props.navigation
+
         return(
                             
                 <View key={this.props.keyval} style={styles.task}>
@@ -48,6 +51,12 @@ export default class Comment extends React.Component{
                         <Text>Delete</Text>
                     
                     </TouchableOpacity>
+
+                    <TouchableOpacity onPress={()=>{navigation.navigate('AddComment',{add_or_edit: 1,key: this.props.keyval,title: this.returnTitle(), text: this.returnComment()})}} style={styles.taskDelete}>
+                    
+                        <Text>Editar</Text>
+                
+                     </TouchableOpacity> 
                 </View>
               
         );

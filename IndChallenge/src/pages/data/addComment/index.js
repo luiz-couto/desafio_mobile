@@ -48,6 +48,44 @@ export default class AddComment extends React.Component{
         this.props.navigation.navigate('Data',{atualizado: 1})
     };
 
+    updateData(itemID){
+
+        id = this.getID(itemID)
+
+        var title = this.state.title
+        var comment = this.state.text
+
+        db.transaction(function(tx){
+            tx.executeSql('UPDATE comment_table SET comment_title =(?),comment_text =(?) WHERE comment_id =(?)',[title,comment,id])
+        })
+
+
+        this.props.navigation.navigate('Data',{atualizado: 1})
+
+    }
+
+    getID(i){
+
+        let result = new Promise((resolve,reject) => {
+            
+            db.transaction(function(tx){
+            tx.executeSql('SELECT * FROM comment_table',[],(tx,resultado) => {
+                resolve(resultado)
+                
+                
+            })
+        },null)})
+
+        result.then((resultado) => {
+
+           id = resultado.rows.item(i).comment_id
+           return id
+
+        })
+
+
+    }
+
     render(){
         
         
@@ -125,6 +163,7 @@ export default class AddComment extends React.Component{
 
         const _text = navigation.getParam('text','')
         const _title = navigation.getParam('title','')
+        const _key = navigation.getParam('key',0)
 
         this.state.text = _text
         this.state.title = _title
@@ -175,7 +214,7 @@ export default class AddComment extends React.Component{
                         </View>
 
                         <View>
-                            <TouchableOpacity onPress={() => {this.saveData()}} style={styles.publish_touchable}>
+                            <TouchableOpacity onPress={() => {this.updateData(_key)}} style={styles.publish_touchable}>
                                 <View style={styles.publish_button}>
                                 <Text style={styles.publish_text}>Pronto!</Text>
                                 </View>

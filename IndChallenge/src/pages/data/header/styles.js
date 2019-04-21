@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
    container:{
 
         flexDirection: 'row',
-        backgroundColor: 'white',
+        backgroundColor: 'rgb(99,99,99)',
         height: 70,
 
    },
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
         fontSize: 20,
         fontFamily:'Manjari-Thin',
-        color: 'rgb(155,155,155)'
+        color: 'rgb(255,255,255)'
 
 
 },

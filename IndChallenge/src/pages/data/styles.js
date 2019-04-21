@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
    container:{
 
         
-        backgroundColor: 'rgb(155,155,155)',
+        backgroundColor: 'rgb(255,255,255)',
         flex: 1,
 
    },

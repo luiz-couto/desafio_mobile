@@ -33,9 +33,42 @@ export default class Comment extends React.Component{
                 <View key={this.props.keyval} style={styles.task}>
                     
                     <View style={styles.com_container}>
-                            <View style={styles.title_con}>
-                                <Text style={styles.title}>{this.returnTitle()}</Text>
+                           
+                           <View style={styles.head_container}>
+                                <View style={styles.title_con}>
+                                    <Text style={styles.title}>{this.returnTitle()}</Text>
+                                </View>
+
+                                <View style={styles.btn_con}>
+                                    <View style={styles.edit_con}>
+                                        <TouchableOpacity onPress={()=>{navigation.navigate('AddComment',{add_or_edit: 1,key: this.props.keyval,title: this.returnTitle(), text: this.returnComment()})}} style={styles.taskDelete}>
+                                
+                                            <Image
+                                
+                                                style={styles.edit}
+                                                source={require('./edit_icon.png')}
+
+                                            />
+                            
+                                        </TouchableOpacity> 
+                                    </View>
+                                
+                                    <View style={styles.delete_con}>
+                                        <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>
+                                
+                                            <Image
+                                    
+                                                style={styles.delete}
+                                                source={require('./delete_icon.png')}
+
+                                            />
+                                
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+                               
                             </View>
+
 
                             <View style={styles.text_con}>
                                 <Text style={styles.comment}>{this.returnComment()}</Text>
@@ -46,17 +79,7 @@ export default class Comment extends React.Component{
                             </View>
                     </View>
                     
-                    <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>
                     
-                        <Text>Delete</Text>
-                    
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={()=>{navigation.navigate('AddComment',{add_or_edit: 1,key: this.props.keyval,title: this.returnTitle(), text: this.returnComment()})}} style={styles.taskDelete}>
-                    
-                        <Text>Editar</Text>
-                
-                     </TouchableOpacity> 
                 </View>
               
         );

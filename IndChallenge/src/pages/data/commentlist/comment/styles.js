@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
    container:{
 
         
-        backgroundColor: 'rgb(155,155,155)',
+        backgroundColor: 'rgb(255,255,255)',
         flex: 1,
         
 
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
    title:{
 
-    color:'white',
+    color:'rgb(100,100,100)',
     fontFamily:'Manjari-Thin',
     fontSize: 20,
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
    comment:{
 
-    color: 'white',
+    color: 'rgb(100,100,100)',
     fontFamily:'Manjari-Thin',
     fontSize: 20,
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
    com_container:{
 
       borderWidth:1,
-      borderColor:'rgb(160,227,213)',
+      borderColor:'rgba(130,213,196,0.6)',
       borderRadius:12,
       marginLeft: 40,
       marginRight:23,
@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
 
    title_con:{
 
-      borderBottomWidth: 1,
-      borderBottomColor: 'rgb(160,227,213)',
+      
       paddingTop: 15,
       paddingLeft: 15,
       paddingRight: 15,
       paddingBottom: 7,
-      
+      width: 213,
+      //borderWidth:1,
       
 
    },
@@ -71,11 +71,60 @@ const styles = StyleSheet.create({
 
       width: 40,
       borderBottomWidth: 1,
-      borderBottomColor:'rgb(160,227,213)',
+      borderBottomColor:'rgba(130,213,196,0.6)',
       marginLeft: 16,
       marginBottom: 23,
 
 
+   },
+
+   head_container:{
+
+      flexDirection:'row',
+      borderBottomWidth: 1,
+      borderBottomColor: 'rgba(130,213,196,0.6)',
+      
+   },
+
+   edit:{
+
+      width:23,
+      height:23,
+      
+
+   },
+
+   delete:{
+
+      width:23,
+      height:23,
+      
+
+   },
+
+   edit_con:{
+
+      
+      marginLeft: 5,
+      //marginTop: 15,
+
+   },
+
+   delete_con:{
+
+      
+      marginLeft: 12,
+      //marginTop: 15,
+
+   },
+
+   btn_con:{
+
+      flexDirection:'row',
+      alignContent:'center',
+      alignItems:'center'
+
+      
    },
   
 });

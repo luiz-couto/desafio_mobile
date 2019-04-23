@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
    container:{
 
         
-        backgroundColor: 'rgb(155,155,155)',
+        backgroundColor: 'rgb(99,99,99)',
         flex: 1,
         
 
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 back_button:{
 
     borderWidth:0.4,
-    borderColor: 'white',
+    borderColor: 'rgb(27,179,148)',
     paddingLeft:wp('5.33%'),
     paddingRight:wp('5.33%'),
     paddingTop:8,
@@ -97,7 +97,7 @@ back_text:{
 
     fontFamily:'Manjari-Thin',
     fontSize:hp('3.0%'),
-    color:'rgb(255,255,255)',
+    color:'rgb(27,179,148)',
 
 },
 
@@ -110,7 +110,7 @@ back_touchable:{
 publish_button:{
 
     borderWidth:0.4,
-    borderColor: 'white',
+    borderColor: 'rgb(27,179,148)',
     paddingLeft:wp('5.33%'),
     paddingRight:wp('5.33%'),
     paddingTop:8,
@@ -119,7 +119,7 @@ publish_button:{
     height:hp('6.33%'),
     width: wp('43%'),
     alignItems:'center',
-    backgroundColor:'rgb(255,255,255)'
+    backgroundColor:'rgb(27,179,148)'
 
 
 },
@@ -128,7 +128,7 @@ publish_text:{
 
     fontFamily:'Manjari-Thin',
     fontSize:hp('3.0%'),
-    color:'rgb(155,155,155)',
+    color:'rgb(255,255,255)',
 
 },
 

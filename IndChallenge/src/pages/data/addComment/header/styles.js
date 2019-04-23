@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
     fontSize: 20,
     fontFamily:'Manjari-Thin',
-    color: 'rgb(155,155,155)'
+    color: 'rgb(99,99,99)'
 
 
 },

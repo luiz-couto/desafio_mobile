@@ -10,6 +10,16 @@ const styles = StyleSheet.create({
 
 
    },
+
+   uni_image:{
+
+      width:wp('69.44%'),
+      height: hp('35.78%'),
+      marginTop: hp('10.10%'),
+      marginLeft: wp('15%'),
+
+
+  },
   
 });
 

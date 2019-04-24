@@ -175,21 +175,37 @@ export default class CommentList extends React.Component{
           });
         
         
-
-        return(
-
-            <View>
-                <ScrollView style={styles.scroll}>
-
-                    {comments}
-
-                </ScrollView>
-            </View>
         
+        if(this.state.commentArray.length == 0){
+
+            return(
+
+                <View>
+                   <Image
+                    
+                    style={styles.uni_image}
+                    source={require('./uni_image.png')}
+
+                    />
+                </View>
+            )
+
+        }else{
+
+            return(
+
+                <View>
+                    <ScrollView style={styles.scroll}>
+
+                        {comments}
+
+                    </ScrollView>
+                </View>
+            )        
+        }
 
 
-
-    )}
+    }
 
 
 

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     marginTop: hp('0.67%'),
     borderRadius: 4,
     backgroundColor:'rgb(255,255,255)',
-    fontFamily:'Manjari-Thin',
+    //fontFamily:'Manjari-Thin',
     
     
 

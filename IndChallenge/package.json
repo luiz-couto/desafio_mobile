@@ -3,15 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "react-native run-android",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "2.24.0",
     "react": "16.8.3",
     "react-native": "0.59.2",
-    "react-native-gesture-handler": "^1.1.0"
+    "react-native-gesture-handler": "1.1.0",
+    "react-native-sqlite-storage": "3.3.10",
+    "react-native-responsive-screen":"1.2.2",
+    "react-navigation":"3.9.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.0",

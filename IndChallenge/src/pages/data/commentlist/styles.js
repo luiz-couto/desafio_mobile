@@ -4,14 +4,12 @@ from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
 
-   container:{
+   scroll:{
 
-        
-        backgroundColor: 'rgb(255,255,255)',
-        flex: 1,
+    height: 590,
+
 
    },
-
   
 });
 

@@ -7,11 +7,13 @@ import { View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native'
 import styles from './menu_styles'
 import Main from './pages/main/index';
 import Data from './pages/data/index';
+import AddComment from './pages/data/addComment'
 
 const RootStack = createDrawerNavigator({
 
   Main: { screen: Main },
   Data: { screen: Data },
+  
 },{
 
   contentComponent: (props) => (
@@ -49,15 +51,29 @@ const RootStack = createDrawerNavigator({
         </View>
       ),
 
-    drawerWidth: wp('63.88%')
+    drawerWidth: wp('63.88%'),
+    
 
 
 
 },);
 
+const AppNavigator = createStackNavigator(
+  {
+      Drawer: {screen: RootStack},
+      AddComment: { screen: AddComment},
+    
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false,
+    }
+  }
+);
 
 
-const Routes = createAppContainer(RootStack);
+const Routes = createAppContainer(AppNavigator);
 
 export default Routes;
 

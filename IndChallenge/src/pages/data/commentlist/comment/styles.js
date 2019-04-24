@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
     color:'rgb(100,100,100)',
     fontFamily:'Manjari-Thin',
-    fontSize: 20,
+    fontSize: hp('2.7%'),
 
    },
 
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
     color: 'rgb(100,100,100)',
     fontFamily:'Manjari-Thin',
-    fontSize: 20,
+    fontSize: hp('2.7%'),
 
    },
 
@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
       borderWidth:1,
       borderColor:'rgba(130,213,196,0.6)',
       borderRadius:12,
-      marginLeft: 40,
-      marginRight:23,
-      marginTop: 25,
+      marginLeft: wp('11.11%'),
+      marginRight:wp('6.38%'),
+      marginTop: hp('3.37%'),
       //padding: 15,
       
 
@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
    title_con:{
 
       
-      paddingTop: 15,
-      paddingLeft: 15,
-      paddingRight: 15,
-      paddingBottom: 7,
-      width: 213,
+      paddingTop: hp('2.02%'),
+      paddingLeft: wp('4.16%'),
+      paddingRight: wp('4.16%'),
+      paddingBottom: hp('0.94%'),
+      width: wp('59.16%'),
       //borderWidth:1,
       
 
@@ -59,21 +59,21 @@ const styles = StyleSheet.create({
    text_con:{
 
       //marginTop:8,
-      paddingTop: 15,
-      paddingLeft: 15,
-      paddingRight: 15,
-      paddingBottom: 10,
+      paddingTop: hp('2.02%'),
+      paddingLeft: wp('4.16%'),
+      paddingRight: wp('4.16%'),
+      paddingBottom: hp('1.35%'),
       
 
    },
    
    down_bor:{
 
-      width: 40,
+      width: wp('11.11%'),
       borderBottomWidth: 1,
       borderBottomColor:'rgba(130,213,196,0.6)',
-      marginLeft: 16,
-      marginBottom: 23,
+      marginLeft: wp('4.44%'),
+      marginBottom: hp('3.10%'),
 
 
    },
@@ -88,16 +88,16 @@ const styles = StyleSheet.create({
 
    edit:{
 
-      width:23,
-      height:23,
+      width:wp('6.38%'),
+      height:hp('3.10%'),
       
 
    },
 
    delete:{
 
-      width:23,
-      height:23,
+      width:wp('6.38%'),
+      height:hp('3.10%'),
       
 
    },
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
    edit_con:{
 
       
-      marginLeft: 5,
+      marginLeft: wp('1.38%'),
       //marginTop: 15,
 
    },
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
    delete_con:{
 
       
-      marginLeft: 12,
+      marginLeft: wp('3.33%'),
       //marginTop: 15,
 
    },

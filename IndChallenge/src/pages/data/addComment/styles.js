@@ -15,12 +15,12 @@ const styles = StyleSheet.create({
 
    input_title:{
 
-    width: 330,
-    height: 40,
+    width: wp('91.66%'),
+    height: hp('5.4%'),
     borderColor: 'rgba(255,255,255,0.6)',
     borderWidth: 1,
-    marginLeft: 15,
-    marginTop: 5,
+    marginLeft: wp('4.16%'),
+    marginTop: hp('0.67%'),
     borderRadius: 4,
     backgroundColor:'rgb(255,255,255)',
     fontFamily:'Manjari-Thin',
@@ -32,14 +32,14 @@ const styles = StyleSheet.create({
 
    title_text_container:{
 
-    marginLeft: 18,
-    marginTop: 30,
+    marginLeft: wp('5.0%'),
+    marginTop: hp('4.05%'),
 
    },
 
    title_text:{
 
-    fontSize: 18,
+    fontSize: hp('2.43%'),
     fontFamily:'Manjari-Thin',
     color: 'rgb(255,255,255)',
     
@@ -48,23 +48,23 @@ const styles = StyleSheet.create({
 
    input_comment:{
     
-    width: 330,
-    height: 300,
+    width: wp('91.66%'),
+    height: hp('40.54%'),
     borderColor: 'rgba(255,255,255,0.6)',
     borderWidth: 1,
-    marginLeft: 15,
-    marginTop: 5,
+    marginLeft: wp('4.16%'),
+    marginTop: hp('0.67%'),
     backgroundColor:'rgb(255,255,255)',
     borderRadius: 4,
     textAlignVertical: 'top',
     fontFamily:'Manjari-Thin',
-    fontSize: 18,
+    fontSize: hp('2.43%'),
 
    },
 
    comment_text:{
 
-    fontSize: 18,
+    fontSize: hp('2.43%'),
     fontFamily:'Manjari-Thin',
     color: 'rgb(255,255,255)',
 
@@ -72,18 +72,18 @@ const styles = StyleSheet.create({
 
    comment_text_container:{
 
-    marginLeft: 18,
-    marginTop: 25,
+    marginLeft: wp('5.0%'),
+    marginTop: hp('3.38%'),
    
    },
 
 back_button:{
 
-    borderWidth:0.4,
+    borderWidth: 0.4,
     borderColor: 'rgb(27,179,148)',
-    paddingLeft:wp('5.33%'),
-    paddingRight:wp('5.33%'),
-    paddingTop:8,
+    paddingLeft: wp('5.33%'),
+    paddingRight: wp('5.33%'),
+    paddingTop: hp('1.08%'),
     paddingBottom: hp('0.13%'),
     borderRadius: 3,
     height:hp('6.33%'),
@@ -103,8 +103,8 @@ back_text:{
 
 back_touchable:{
 
-    marginLeft:16,
-    marginTop:20
+    marginLeft:wp('4.44%'),
+    marginTop:hp('2.7%'),
 },
 
 publish_button:{
@@ -113,7 +113,7 @@ publish_button:{
     borderColor: 'rgb(27,179,148)',
     paddingLeft:wp('5.33%'),
     paddingRight:wp('5.33%'),
-    paddingTop:8,
+    paddingTop:hp('1.08%'),
     paddingBottom: hp('0.13%'),
     borderRadius: 3,
     height:hp('6.33%'),
@@ -134,8 +134,8 @@ publish_text:{
 
 publish_touchable:{
 
-    marginLeft:18,
-    marginTop:20
+    marginLeft:wp('5.0%'),
+    marginTop:hp('2.7%')
 },
 
 

@@ -8,50 +8,50 @@ const styles = StyleSheet.create({
 
         flexDirection: 'row',
         backgroundColor: 'rgb(99,99,99)',
-        height: 70,
+        height: hp('9.45%'),
 
    },
 
    menu_container:{
 
-        marginLeft: 18,
-        marginTop: 16,
+        marginLeft: wp('5.0%'),
+        marginTop: hp('2.16%'),
 
 
    },
 
    title_container:{
 
-        marginLeft: 70,
-        marginTop: 25,
+        marginLeft: wp('19.44%'),
+        marginTop: hp('3.37%'),
 
    },
 
    add_container:{
 
-        marginLeft: 65,
-        marginTop: 17,
+        marginLeft: wp('20.05%'),
+        marginTop: hp('2.29%'),
 
    },
   
   
    menu_image:{
 
-        width: 35,
-        height: 35
+        width: wp('9.72%'),
+        height: hp('4.72%')
 
    },
 
    add_image:{
 
-        width: 40,
-        height: 40,
+        width: wp('11.11%'),
+        height: hp('5.4%'),
 
 },
 
    title_text:{
 
-        fontSize: 20,
+        fontSize: hp('2.7%'),
         fontFamily:'Manjari-Thin',
         color: 'rgb(255,255,255)'
 

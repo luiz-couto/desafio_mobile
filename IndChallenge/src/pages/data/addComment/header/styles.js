@@ -8,28 +8,28 @@ const styles = StyleSheet.create({
 
         flexDirection: 'row',
         backgroundColor: 'white',
-        height: 70,
+        height: hp('9.45%'),
 
    },
 
    menu_container:{
 
-        marginLeft: 18,
-        marginTop: 16,
+        marginLeft: wp('5.0%'),
+        marginTop: hp('2.16%'),
 
 
    },
 
    title_container:{
 
-        marginLeft: 40,
-        marginTop: 22.5,
+        marginLeft: wp('11.11%'),
+        marginTop: hp('3.04%'),
 
    },
 
    title_text:{
 
-    fontSize: 20,
+    fontSize: hp('2.7%'),
     fontFamily:'Manjari-Thin',
     color: 'rgb(99,99,99)'
 
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
 },
    menu_image:{
 
-    width: 35,
-    height: 35
+    width: wp('9.72%'),
+    height: hp('4.73%')
 
 },
 

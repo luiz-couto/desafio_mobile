@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
 
    scroll:{
 
-    height: 590,
+    height: hp('84.72%'),
 
 
    },

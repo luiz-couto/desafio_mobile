@@ -12,7 +12,7 @@ import AddComment from './pages/data/addComment'
 const RootStack = createDrawerNavigator({
 
   Main: { screen: Main },
-  Data: { screen: Data },
+  Comentários: { screen: Data },
   
 },{
 

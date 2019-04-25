@@ -80,7 +80,7 @@ export default class AddComment extends React.Component{
         })
 
         
-        this.props.navigation.navigate('Data',{atualizado: 1})
+        this.props.navigation.navigate('Comentários',{atualizado: 1})
         }
     };
 
@@ -131,7 +131,7 @@ export default class AddComment extends React.Component{
         })
 
 
-        this.props.navigation.navigate('Data',{atualizado: 1})
+        this.props.navigation.navigate('Comentários',{atualizado: 1})
         }
 
     }
@@ -207,7 +207,7 @@ export default class AddComment extends React.Component{
 
                 <View style={styles.buttons_container}>
                     <View>
-                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Data')}} style={styles.back_touchable}>
+                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Comentários')}} style={styles.back_touchable}>
                             <View style={styles.back_button}>
                             <Text style={styles.back_text}>Cancelar</Text>
                             </View>
@@ -278,7 +278,7 @@ export default class AddComment extends React.Component{
 
                     <View style={styles.buttons_container}>
                         <View>
-                            <TouchableOpacity onPress={() => {this.props.navigation.navigate('Data')}} style={styles.back_touchable}>
+                            <TouchableOpacity onPress={() => {this.props.navigation.navigate('Comentários')}} style={styles.back_touchable}>
                                 <View style={styles.back_button}>
                                 <Text style={styles.back_text}>Cancelar</Text>
                                 </View>

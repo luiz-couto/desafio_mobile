@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
    input_title:{
 
     width: wp('91.66%'),
-    height: hp('5.4%'),
+    height: hp('7.4%'),
     borderColor: 'rgba(255,255,255,0.6)',
     borderWidth: 1,
     marginLeft: wp('4.16%'),

@@ -177,7 +177,7 @@ export default class AddComment extends React.Component{
             <View styles={styles.title_container}>
 
                 <View style={styles.title_text_container}>
-                    <Text style={styles.title_text}>Título</Text>
+                    <Text style={styles.title_text}>TagName</Text>
                 </View>
                
                 <TextInput

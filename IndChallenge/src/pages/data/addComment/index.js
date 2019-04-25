@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Image,TextInput,Text,TouchableOpacity} from 'react-native'
+import {View,Image,TextInput,Text,TouchableOpacity,Alert} from 'react-native'
 import { NavigationActions, StackActions, DrawerActions } from 'react-navigation'
 
 import Header from './header'
@@ -40,12 +40,48 @@ export default class AddComment extends React.Component{
         var title = this.state.title
         var comment = this.state.text
 
+        if(this.state.title.length == 0 || this.state.text.length == 0){
+            if(this.state.title.length == 0){
+                Alert.alert(
+                    'TagName vazia',
+                    'Você deve adicionar algum texto no campo de tagName.',
+                    [
+                      
+                      {
+                        text: 'Ok',
+                        onPress: () => console.log('Ok Pressed'),
+                        style: 'ok',
+                      },
+                      
+                    ],
+                    
+                  );
+            }else{
+                Alert.alert(
+                    'Comentário vazio',
+                    'Não se esqueça de adicionar o comentário!',
+                    [
+                      
+                      {
+                        text: 'Ok',
+                        onPress: () => console.log('Ok Pressed'),
+                        style: 'ok',
+                      },
+                      
+                    ],
+                    
+                  );
+
+            }
+        }else{
+
         db.transaction(function(tx){
             tx.executeSql('INSERT INTO comment_table (comment_title,comment_text) VALUES(?,?)',[title,comment])
         })
 
         
         this.props.navigation.navigate('Data',{atualizado: 1})
+        }
     };
 
     updateData(itemID){
@@ -55,12 +91,48 @@ export default class AddComment extends React.Component{
         var title = this.state.title
         var comment = this.state.text
 
+        if(this.state.title.length == 0 || this.state.text.length == 0){
+            if(this.state.title.length == 0){
+                Alert.alert(
+                    'TagName vazia',
+                    'Você deve adicionar algum texto no campo de tagName.',
+                    [
+                      
+                      {
+                        text: 'Ok',
+                        onPress: () => console.log('Ok Pressed'),
+                        style: 'ok',
+                      },
+                      
+                    ],
+                    
+                  );
+            }else{
+                Alert.alert(
+                    'Comentário vazio',
+                    'Não se esqueça de adicionar o comentário!',
+                    [
+                      
+                      {
+                        text: 'Ok',
+                        onPress: () => console.log('Ok Pressed'),
+                        style: 'ok',
+                      },
+                      
+                    ],
+                    
+                  );
+
+            }
+        }else{
+
         db.transaction(function(tx){
             tx.executeSql('UPDATE comment_table SET comment_title =(?),comment_text =(?) WHERE comment_id =(?)',[title,comment,id])
         })
 
 
         this.props.navigation.navigate('Data',{atualizado: 1})
+        }
 
     }
 

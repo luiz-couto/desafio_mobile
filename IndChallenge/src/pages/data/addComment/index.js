@@ -1,6 +1,6 @@
 import React from 'react'
-import {View,Image,TextInput,Text,TouchableOpacity,Alert} from 'react-native'
-import { NavigationActions, StackActions, DrawerActions } from 'react-navigation'
+import {View,Image,TextInput,Text,TouchableOpacity,Alert,TouchableWithoutFeedback,Keyboard} from 'react-native'
+
 
 import Header from './header'
 import styles from './styles';
@@ -170,93 +170,23 @@ export default class AddComment extends React.Component{
         if(navigation.getParam('add_or_edit',0) == 0){
         return(
 
-            <View style={styles.container}>
-                
-                <Header navigation={navigation} />
-
-            <View styles={styles.title_container}>
-
-                <View style={styles.title_text_container}>
-                    <Text style={styles.title_text}>TagName</Text>
-                </View>
-               
-                <TextInput
-                    style={styles.input_title}
-                    onChangeText={(title) => this.setState({title})}
-                    value={this.state.title}
-                    placeholder={'Escreva aqui o título'}
-                    placeholderTextColor={'rgba(255,255,255,0.2)'}
-                    underlineColorAndroid={'transparent'}
-                    autoCorrect={false}
-                    
-                />
-
-                <View style={styles.comment_text_container}>
-                    <Text style={styles.comment_text}>Descrição</Text>
-                </View>
-               
-                <TextInput
-                    style={styles.input_comment}
-                    onChangeText={(text) => this.setState({text})}
-                    value={this.state.text}
-                    underlineColorAndroid={'transparent'}
-                    multiline = {true}
-                    autoCorrect={false}
-                />
-
-
-                <View style={styles.buttons_container}>
-                    <View>
-                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Comentários')}} style={styles.back_touchable}>
-                            <View style={styles.back_button}>
-                            <Text style={styles.back_text}>Cancelar</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View>
-                        <TouchableOpacity onPress={() => {this.saveData()}} style={styles.publish_touchable}>
-                            <View style={styles.publish_button}>
-                            <Text style={styles.publish_text}>Comentar</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-
-
-
-            </View>
-
-
-    )}
-
-    else if(navigation.getParam('add_or_edit',0) == 1){
-
-        const _text = navigation.getParam('text','')
-        const _title = navigation.getParam('title','')
-        const _key = navigation.getParam('key',0)
-
-        this.state.text = _text
-        this.state.title = _title
-
-        
-
-        return(
-            <View style={styles.container}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+                <View style={styles.container}>
                     
                     <Header navigation={navigation} />
 
                 <View styles={styles.title_container}>
 
                     <View style={styles.title_text_container}>
-                        <Text style={styles.title_text}>Título</Text>
+                        <Text style={styles.title_text}>TagName</Text>
                     </View>
                 
                     <TextInput
                         style={styles.input_title}
-                        onChangeText={(title) => {this.setState({title}),navigation.setParams({title: title})}}
+                        onChangeText={(title) => this.setState({title})}
                         value={this.state.title}
+                        placeholder={'Escreva aqui o título'}
+                        placeholderTextColor={'rgba(255,255,255,0.2)'}
                         underlineColorAndroid={'transparent'}
                         autoCorrect={false}
                         
@@ -268,7 +198,7 @@ export default class AddComment extends React.Component{
                 
                     <TextInput
                         style={styles.input_comment}
-                        onChangeText={(text) => {this.setState({text}),navigation.setParams({text: text})}}
+                        onChangeText={(text) => this.setState({text})}
                         value={this.state.text}
                         underlineColorAndroid={'transparent'}
                         multiline = {true}
@@ -286,9 +216,9 @@ export default class AddComment extends React.Component{
                         </View>
 
                         <View>
-                            <TouchableOpacity onPress={() => {this.updateData(_key)}} style={styles.publish_touchable}>
+                            <TouchableOpacity onPress={() => {this.saveData()}} style={styles.publish_touchable}>
                                 <View style={styles.publish_button}>
-                                <Text style={styles.publish_text}>Pronto!</Text>
+                                <Text style={styles.publish_text}>Comentar</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -298,6 +228,79 @@ export default class AddComment extends React.Component{
 
 
                 </View>
+            </TouchableWithoutFeedback>
+
+    )}
+
+    else if(navigation.getParam('add_or_edit',0) == 1){
+
+        const _text = navigation.getParam('text','')
+        const _title = navigation.getParam('title','')
+        const _key = navigation.getParam('key',0)
+
+        this.state.text = _text
+        this.state.title = _title
+
+        
+
+        return(
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+                <View style={styles.container}>
+                        
+                        <Header navigation={navigation} />
+
+                    <View styles={styles.title_container}>
+
+                        <View style={styles.title_text_container}>
+                            <Text style={styles.title_text}>Título</Text>
+                        </View>
+                    
+                        <TextInput
+                            style={styles.input_title}
+                            onChangeText={(title) => {this.setState({title}),navigation.setParams({title: title})}}
+                            value={this.state.title}
+                            underlineColorAndroid={'transparent'}
+                            autoCorrect={false}
+                            
+                        />
+
+                        <View style={styles.comment_text_container}>
+                            <Text style={styles.comment_text}>Descrição</Text>
+                        </View>
+                    
+                        <TextInput
+                            style={styles.input_comment}
+                            onChangeText={(text) => {this.setState({text}),navigation.setParams({text: text})}}
+                            value={this.state.text}
+                            underlineColorAndroid={'transparent'}
+                            multiline = {true}
+                            autoCorrect={false}
+                        />
+
+
+                        <View style={styles.buttons_container}>
+                            <View>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('Comentários')}} style={styles.back_touchable}>
+                                    <View style={styles.back_button}>
+                                    <Text style={styles.back_text}>Cancelar</Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View>
+                                <TouchableOpacity onPress={() => {this.updateData(_key)}} style={styles.publish_touchable}>
+                                    <View style={styles.publish_button}>
+                                    <Text style={styles.publish_text}>Pronto!</Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+
+
+
+                    </View>
+                </TouchableWithoutFeedback>
         )
 
     }

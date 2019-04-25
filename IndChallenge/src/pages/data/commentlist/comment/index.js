@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity,Image} from 'react-native';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp}
-from 'react-native-responsive-screen';
+import { StyleSheet, Text, View, TouchableOpacity,Image,Alert} from 'react-native';
+
 
 import styles from './styles'
 
@@ -21,6 +20,26 @@ export default class Comment extends React.Component{
         text = this.props.val.title
         spl = text.split(';.;',2)
         return spl[1]
+
+    }
+    deleteComment(){
+
+        Alert.alert(
+            'Excluir',
+            'Tem certeza que deseja apagar esse comentário?',
+            [
+              
+              {
+                text: 'Cancelar',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel',
+              },
+              {text: 'Apagar', onPress: this.props.deleteMethod},
+            ],
+            
+          );
+
+
 
     }
     
@@ -54,7 +73,7 @@ export default class Comment extends React.Component{
                                     </View>
                                 
                                     <View style={styles.delete_con}>
-                                        <TouchableOpacity onPress={this.props.deleteMethod} style={styles.taskDelete}>
+                                        <TouchableOpacity onPress={() => {this.deleteComment()}} style={styles.taskDelete}>
                                 
                                             <Image
                                     

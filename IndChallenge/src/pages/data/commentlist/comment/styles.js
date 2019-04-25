@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
    edit_con:{
 
       
-      marginLeft: wp('1.38%'),
+      marginLeft: wp('2.28%'),
       //marginTop: 15,
 
    },

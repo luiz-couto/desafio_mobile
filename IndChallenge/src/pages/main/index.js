@@ -1,9 +1,11 @@
 import React from 'react'
 import {View, Text, ImageBackground, TouchableOpacity, Image} from 'react-native'
+import { Toast } from 'native-base';
 import styles from './styles'
 import { ScrollView } from 'react-native-gesture-handler';
 
 import ReleaseList from './releaseList/index'
+
 
 export default class Main extends React.Component{
     
@@ -46,6 +48,28 @@ export default class Main extends React.Component{
 
     }
 
+    async fetchData() {  //here its just verified the connection, the data manipulation its inside ReleaseList Component
+       
+        try {
+            let response = await fetch(
+                "https://api.github.com/repos/balderdashy/sails/releases",
+            );
+            this.setState({haveData: true})
+            
+          } catch (error) {
+            this.setState({haveData: false})
+            console.log("Without connection")
+            Toast.show({
+                text: 'No connection to the internet!',
+                buttonText: 'OK',
+                textStyle: styles.toast_text,
+                duration: 4000,
+              })
+          }
+    }
+        
+    
+
     render(){
 
         const{ navigation } = this.props;
@@ -63,7 +87,7 @@ export default class Main extends React.Component{
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <TouchableOpacity onPress={() => {this.setState({haveData: true})}} style={styles.request_touchable}>
+                    <TouchableOpacity onPress={() => {this.fetchData().done()}} style={styles.request_touchable}>
                         <View style={styles.request_button}>
                         <Text style={styles.request_text}>Requisitar dados</Text>
                         </View>

@@ -1,6 +1,7 @@
 import { createStackNavigator, createAppContainer,createDrawerNavigator,
-DrawerItems, DrawerActions} from 'react-navigation';
+DrawerItems} from 'react-navigation';
 import React from 'react'
+import { Root } from "native-base";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp}
 from 'react-native-responsive-screen';
 import { View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native'
@@ -75,5 +76,8 @@ const AppNavigator = createStackNavigator(
 
 const Routes = createAppContainer(AppNavigator);
 
-export default Routes;
+export default () =>
+  <Root>
+    <Routes />
+  </Root>;
 

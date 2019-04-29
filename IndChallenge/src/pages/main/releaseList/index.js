@@ -1,5 +1,6 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {View, Text,} from 'react-native'
+import { Spinner } from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler'
 
 import styles from './styles'
@@ -46,7 +47,8 @@ export default class ReleaseList extends React.Component{
 
             return (
                 <View style={styles.loading_container}>
-                    <Text style={styles.loading}>Carregando.....</Text>
+                    <Spinner />
+                    {/* <Text style={styles.loading}>Carregando.....</Text> */} 
                 </View>
             )
         }else{

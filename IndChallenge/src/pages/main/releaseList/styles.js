@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     
     loading_container:{
 
-        marginLeft: wp('26.38%'),
+        //marginLeft: wp('1.38%'),
         marginTop: hp('33.78%'),
 
 

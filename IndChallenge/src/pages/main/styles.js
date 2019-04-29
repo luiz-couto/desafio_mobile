@@ -65,7 +65,13 @@ const styles = StyleSheet.create({
         marginLeft: wp('15%'),
 
 
+    },
+
+    toast_text:{
+        color: 'rgba(27,179,148,0.8)',
+        marginLeft: 10,
     }
+
 
     
   

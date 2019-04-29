@@ -1,12 +1,12 @@
 # Desafio IndWise
-## Sobre o aplicativo (ainda em desenvolvimento)
+## Sobre o aplicativo
 
 - App desenvolvido utilizando React-Native
 - Meu email: luiz.felipe.556@outlook.com
 
 ## Para compilar
 
-The app is not yet completed, but for some preview:
+The app is done! To perform the compilation:
 
 
 - Clone this repository
@@ -30,4 +30,4 @@ react-native run-android
 
 - Remember to make sure that you have the Andoid SDK installed and an android emulator/device connect.
 
-- Any errors that may occur(but i expect not) will be fixed soon ;)
+- Any doubts/errors following this steps, just email me ;)
